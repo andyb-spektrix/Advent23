@@ -37,9 +37,17 @@ public class ScratchCardCheckerShould
         
         Assert.That(points, Is.EqualTo(13));
     }
+    
+    [Test]
+    public void Solve_Part1()
+    {
+        var points = ScratchCardChecker.CheckCards(Part1Input.Input);
+        
+        Assert.That(points, Is.LessThan(0));
+    }
 }
 
-public partial class ScratchCardChecker
+public static partial class ScratchCardChecker
 {
     public static double CheckCard(string scratchCard)
     {
